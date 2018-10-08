@@ -37,5 +37,5 @@ if __name__ == "__main__":
     learner = StandardLearner(model)
 
     print(learner.summary((1,28,28)))
-    learner.train(mnist_train,loss_fn,optimizer=optimizer,train_metrics=train_metrics,test_loader=mnist_test,test_metrics=test_metrics,num_epochs=5,model_dir="./mnist-model",save_metrics=True,batch_log=False)
+    learner.train(mnist_train,loss_fn,optimizer=optimizer,train_metrics=train_metrics,test_loader=mnist_test,test_metrics=test_metrics,num_epochs=5,model_dir="./mnist-model",save_logs="mnist-logs.txt",save_metrics=True,batch_log=False)
     print(learner.get_train_history())
